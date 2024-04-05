@@ -1,0 +1,9 @@
+name: deploy_clean
+author: kanikin@threecolts.com
+description: deploy clean
+
+runs:
+  using: composite
+  steps:
+    - name: deployer cleaner say hello
+      run: echo "Hello, world! I'm a composite action - cleaner deployer"

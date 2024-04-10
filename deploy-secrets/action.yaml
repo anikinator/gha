@@ -1,0 +1,72 @@
+name: deploy_secrets
+author: kanikin@threecolts.com
+version: v1.0.0
+description: deploy secrets from gh vault
+
+# inputs:
+#   secret_name:
+#     required: false
+#     description: secret name
+#   source_dir:
+#     required: true
+#     description: source directory
+#   dest_root_dir:
+#     required: true
+#     description: destination directory
+#   app_name:
+#     required: true
+#     description: app name
+#   POST_COPY_CMD:
+#     required: false
+#     default: ''
+
+runs:
+  using: composite
+  steps:
+    - name: say hello
+      run: echo "Hello, world! I'm a composite action - secret deployer"
+    # - name: checkout
+    #   uses: actions/checkout@v3
+    #   with:
+    #     ref: test-reusable
+
+    # - name: build and deploy
+    #   env:
+    #     # secret_name: ${{ inputs.secret_name }}
+    #     secret_name: ${{ inputs.secret_name }}
+    #   shell: bash
+    #   run: |
+
+    #     # echo ${{ inputs.source_dir }} \
+    #     #       ${{ inputs.dest_root_dir }} \
+    #     #       ${{ inputs.app_name }} \
+    #     #       ${{ inputs.secret_name }}
+
+    #     echo "################################"
+
+    #     echo ${{ env.secret_name }} | base64 -d > ${{ env.APP_DIR }}/test.txt
+
+    #     cat ${{ env.APP_DIR }}/test.txt
+    #     echo "################################"
+
+
+    # - name: Restart process if exists
+    #   shell: bash
+    #   run: |
+
+    #     echo "restart node process, was tested on mac"
+
+    #     [[ -z "${{ inputs.POST_COPY_CMD }}" ]] && echo "[INFO] No post copy command" \
+    #       || $WWW ${{ inputs.POST_COPY_CMD }}
+
+        #pid=$(pm2 pid nodejs-always-run)
+
+        #[[ -z $pid ]] && echo "no process for [nodejs-always-run]" \
+        #  || pm2 --version
+
+        # echo ${{ env.secret_name }} >> \
+        #   /var/www/test-secret.txt \
+        #   2>&1 /dev/null
+
+        # # exit 1 2>&1 /dev/null
+        # cat /var/www/test-secret.txt 2>&1 /dev/null

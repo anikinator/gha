@@ -1,0 +1,10 @@
+name: deploy_php
+author: kanikin@threecolts.com
+version: v1.0.0
+description: deploy php
+
+runs:
+  using: composite
+  steps:
+    - name: php-deployer say hello
+      run: echo "Hello, world! I'm a composite action - php deployer"

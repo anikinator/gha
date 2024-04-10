@@ -24,6 +24,7 @@ runs:
   using: composite
   steps:
     - name: say hello
+      shell: bash
       run: echo "Hello, world! I'm a composite action - secret deployer"
     # - name: checkout
     #   uses: actions/checkout@v3

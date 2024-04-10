@@ -7,4 +7,5 @@ runs:
   using: composite
   steps:
     - name: php-deployer say hello
+      shell: bash
       run: echo "Hello, world! I'm a composite action - php deployer"
